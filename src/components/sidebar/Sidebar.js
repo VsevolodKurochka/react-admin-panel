@@ -1,4 +1,4 @@
-import {Menu} from 'antd';
+import {Avatar, Menu, Typography} from 'antd';
 import {useLocation} from 'react-router-dom';
 import {
     UserOutlined,
@@ -26,12 +26,19 @@ const Sidebar = () => {
         <Layout.Sider
             className={"sidebar"}
             breakpoint="lg"
-            collapsedWidth="0">
+            collapsedWidth="0"
+            theme={"light"}>
+
             <Menu
                 mode="inline"
                 selectedKeys={[location.pathname]}
-                style={{ height: '100%', borderRight: 0, paddingTop: '75px' }}
+                style={{ height: '100%', borderRight: 0 }}
             >
+                <div className="sidebar__avatar">
+                    <Avatar size={64} icon={<UserOutlined />} />
+                    <p className="sidebar__avatar-name">Vsevolod Kurochka</p>
+                    <p>Software Engineer</p>
+                </div>
                 <Menu.Item key="/" icon={<DashboardOutlined />}>
                     <Link to={'/'}>Dashboard</Link>
                 </Menu.Item>
