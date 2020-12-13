@@ -1,0 +1,5 @@
+@media (min-width: 768px) {
+    .dashboard-card {
+        min-height: 100%;
+    }
+}
