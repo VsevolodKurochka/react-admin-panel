@@ -3,6 +3,7 @@ import Sidebar from './components/sidebar/Sidebar';
 import { Layout } from 'antd';
 import React from 'react';
 import {
+    Redirect,
     Route,
     Switch
 } from 'react-router-dom';
@@ -14,6 +15,7 @@ import Customers from './pages/customers/Customers';
 import Products from './pages/products/Products';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
+import Error404 from './pages/error404/Error404';
 
 const history = createBrowserHistory();
 
@@ -37,9 +39,10 @@ function App() {
                               <Route path="/products" component={Products} />
                               <Route path="/login" component={Login} />
                               <Route path="/register" component={Register} />
+                              <Route path="/404" component={Error404} />
                               <Route exact path="/" component={Dashboard} />
                               <Route path="*">
-                                  <p>Not found</p>
+                                  <Redirect to={'/404'} />
                               </Route>
                           </Switch>
                       </Layout.Content>

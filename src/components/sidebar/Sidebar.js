@@ -46,7 +46,7 @@ const Sidebar = () => {
                     <Menu.Item key="/login" icon={<LoginOutlined />}><Link to={'/login'}>Login</Link></Menu.Item>
                     <Menu.Item key="/register" icon={<UserAddOutlined />}><Link to={'/register'}>Register</Link></Menu.Item>
                 </SubMenu>
-                <Menu.Item key="/error" icon={<WarningOutlined />}>Error</Menu.Item>
+                <Menu.Item key="/404" icon={<WarningOutlined />}><Link to={'/404'}>404</Link></Menu.Item>
             </Menu>
         </Layout.Sider>
     );
