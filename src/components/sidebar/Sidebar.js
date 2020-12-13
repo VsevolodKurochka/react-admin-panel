@@ -22,12 +22,18 @@ const Sidebar = () => {
 
     return (
         <Layout.Sider
+            style={{
+                overflow: 'auto',
+                height: '100vh',
+                position: 'fixed',
+                left: 0
+            }}
             breakpoint="lg"
             collapsedWidth="0">
             <Menu
                 mode="inline"
                 selectedKeys={[location.pathname]}
-                style={{ height: '100%', borderRight: 0 }}
+                style={{ height: '100%', borderRight: 0, paddingTop: '75px' }}
             >
                 <Menu.Item key="/" icon={<HomeOutlined />}>
                     <Link to={'/'}>Home</Link>
@@ -35,7 +41,7 @@ const Sidebar = () => {
                 <Menu.Item key="/dashboard" icon={<DashboardOutlined />}>
                     <Link to={'/dashboard'}>Dashboard</Link>
                 </Menu.Item>
-                <Menu.Item key="/customers" icon={<UsergroupDeleteOutlined />}>Customers</Menu.Item>
+                <Menu.Item key="/customers" icon={<UsergroupDeleteOutlined />}><Link to={'/customers'}>Customers</Link></Menu.Item>
                 <Menu.Item key="/products" icon={<ShoppingCartOutlined />}>Products</Menu.Item>
                 <Menu.Item key="/account" icon={<UserOutlined />}>Account</Menu.Item>
                 <Menu.Item key="/settings" icon={<SettingOutlined />}>Settings</Menu.Item>
