@@ -1,4 +1,4 @@
-import { Table, Tag, Space } from 'antd';
+import { Table, Tag, Space, Button } from 'antd';
 import React from 'react';
 
 const columns = [
@@ -43,7 +43,7 @@ const columns = [
         key: 'action',
         render: (text, record) => (
             <Space size="middle">
-                <a>Invite {record.name}</a>
+                <Button type="primary">Invite {record.name}</Button>
             </Space>
         ),
     },
@@ -73,9 +73,9 @@ const data = [
     },
 ];
 
-const DashboardTable = () => {
+const DashboardTable = ({pagination}) => {
     return (
-        <Table columns={columns} dataSource={data} />
+        <Table columns={columns} dataSource={data} pagination={pagination} />
     );
 };
 

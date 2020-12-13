@@ -8,6 +8,8 @@ import './style.css';
 import DashboardSales from './DashboardSales';
 import {Colors} from 'utils';
 import DashboardTable from './DashboardTable';
+import DashboardTeam from './DashboardTeam';
+import DashboardBrowsers from './DashboardBrowsers';
 
 const { Text, Title } = Typography;
 
@@ -107,13 +109,31 @@ const Dashboard = () => {
                     </Card>
                 </Col>
             </Row>
-            <Row>
+            <Row style={{'marginBottom': '30px'}}>
                 <Col span={24}>
                     <Card>
-                        <DashboardTable />
+                        <DashboardTable pagination={true} />
                     </Card>
                 </Col>
-                <Col span={12}></Col>
+            </Row>
+            <Row style={{'marginBottom': '30px'}}>
+                <Col span={24}>
+                    <Card title={'TEAM TOTAL COMPLETED'} headStyle={headStyle}>
+                        <DashboardTeam />
+                    </Card>
+                </Col>
+            </Row>
+            <Row gutter={16}>
+                <Col span={8}>
+                    <Card className={'dashboard-card'} title={'Browsers'} headStyle={headStyle}>
+                        <DashboardBrowsers />
+                    </Card>
+                </Col>
+                <Col span={16}>
+                    <Card className={'dashboard-card'} title={'Users'} headStyle={headStyle}>
+                        <DashboardTable pagination={false} />
+                    </Card>
+                </Col>
             </Row>
         </>
     );
