@@ -11,6 +11,7 @@ import {createBrowserHistory} from 'history';
 import Dashboard from './pages/dashboard/Dashboard';
 import Home from './pages/home/Home';
 import Customers from './pages/customers/Customers';
+import Products from './pages/products/Products';
 
 const history = createBrowserHistory();
 
@@ -31,6 +32,7 @@ function App() {
                           }}>
                           <Switch>
                               <Route path="/customers" component={Customers} />
+                              <Route path="/products" component={Products} />
                               <Route exact path="/" component={Dashboard} />
                               <Route path="*">
                                   <p>Not found</p>

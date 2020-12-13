@@ -39,7 +39,7 @@ const Sidebar = () => {
                     <Link to={'/'}>Dashboard</Link>
                 </Menu.Item>
                 <Menu.Item key="/customers" icon={<UsergroupDeleteOutlined />}><Link to={'/customers'}>Customers</Link></Menu.Item>
-                <Menu.Item key="/products" icon={<ShoppingCartOutlined />}>Products</Menu.Item>
+                <Menu.Item key="/products" icon={<ShoppingCartOutlined />}><Link to={'/products'}>Products</Link></Menu.Item>
                 <Menu.Item key="/account" icon={<UserOutlined />}>Account</Menu.Item>
                 <Menu.Item key="/settings" icon={<SettingOutlined />}>Settings</Menu.Item>
                 <SubMenu key="sub1" icon={<KeyOutlined />} title="Authentication">
