@@ -12,11 +12,13 @@ const columns = [
         title: 'Age',
         dataIndex: 'age',
         key: 'age',
+        responsive: ['md'],
     },
     {
         title: 'Address',
         dataIndex: 'address',
         key: 'address',
+        responsive: ['md'],
     },
     {
         title: 'Tags',
@@ -37,6 +39,7 @@ const columns = [
                 })}
             </>
         ),
+        responsive: ['md'],
     },
     {
         title: 'Action',
@@ -46,6 +49,7 @@ const columns = [
                 <Button type="primary">Invite {record.name}</Button>
             </Space>
         ),
+        responsive: ['md'],
     },
 ];
 

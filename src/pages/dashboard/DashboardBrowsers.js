@@ -55,7 +55,9 @@ const data = [
 
 const DashboardBrowsers = () => {
     return (
-        <Table columns={columns} dataSource={data} pagination={false} showHeader={false} />
+        <div style={{'overflowX': 'auto', 'maxWidth': '250px'}}>
+            <Table columns={columns} dataSource={data} pagination={false} showHeader={false} />
+        </div>
     );
 };
 

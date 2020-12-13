@@ -15,19 +15,16 @@ import {
 import { Layout } from 'antd';
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './style.css';
 const { SubMenu } = Menu;
+
 
 const Sidebar = () => {
     let location = useLocation();
 
     return (
         <Layout.Sider
-            style={{
-                overflow: 'auto',
-                height: '100vh',
-                position: 'fixed',
-                left: 0
-            }}
+            className={"sidebar"}
             breakpoint="lg"
             collapsedWidth="0">
             <Menu
@@ -40,8 +37,8 @@ const Sidebar = () => {
                 </Menu.Item>
                 <Menu.Item key="/customers" icon={<UsergroupDeleteOutlined />}><Link to={'/customers'}>Customers</Link></Menu.Item>
                 <Menu.Item key="/products" icon={<ShoppingCartOutlined />}><Link to={'/products'}>Products</Link></Menu.Item>
-                <Menu.Item key="/account" icon={<UserOutlined />}>Account</Menu.Item>
-                <Menu.Item key="/settings" icon={<SettingOutlined />}>Settings</Menu.Item>
+                <Menu.Item key="/account" icon={<UserOutlined />}><Link to={'/account'}>Account</Link></Menu.Item>
+                <Menu.Item key="/settings" icon={<SettingOutlined />}><Link to={'/settings'}>Settings</Link></Menu.Item>
                 <SubMenu key="sub1" icon={<KeyOutlined />} title="Authentication">
                     <Menu.Item key="/login" icon={<LoginOutlined />}><Link to={'/login'}>Login</Link></Menu.Item>
                     <Menu.Item key="/register" icon={<UserAddOutlined />}><Link to={'/register'}>Register</Link></Menu.Item>

@@ -23,8 +23,8 @@ const Dashboard = () => {
                 <Breadcrumb.Item>Home</Breadcrumb.Item>
                 <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
             </Breadcrumb>
-            <Row gutter={16} style={{'marginBottom': '30px'}}>
-                <Col span={6}>
+            <Row gutter={16}>
+                <Col style={{'marginBottom': '30px'}} span={24} lg={{span: 6}}>
                     <Card title="Budget"
                           className={'dashboard-card'}
                           headStyle={headStyle}
@@ -40,7 +40,7 @@ const Dashboard = () => {
                         </Row>
                     </Card>
                 </Col>
-                <Col span={6}>
+                <Col style={{'marginBottom': '30px'}} span={24} lg={{span: 6}}>
                     <Card title="Total customers"
                           className={'dashboard-card'}
                           headStyle={headStyle}
@@ -56,7 +56,7 @@ const Dashboard = () => {
                         </Row>
                     </Card>
                 </Col>
-                <Col span={6}>
+                <Col style={{'marginBottom': '30px'}} span={24} lg={{span: 6}}>
                     <Card title="TASKS PROGRESS"
                           className={'dashboard-card'}
                           headStyle={headStyle}
@@ -66,7 +66,7 @@ const Dashboard = () => {
                         <Progress percent={75} status="active" showInfo={false} />
                     </Card>
                 </Col>
-                <Col span={6}>
+                <Col style={{'marginBottom': '30px'}} span={24} lg={{span: 6}}>
                     <Card title="Total profit"
                           className={'dashboard-card'}
                           headStyle={headStyle}
@@ -77,7 +77,7 @@ const Dashboard = () => {
                 </Col>
             </Row>
             <Row gutter={16} style={{'marginBottom': '30px'}}>
-                <Col span={18}>
+                <Col span={24} lg={{span: 18}}>
                     <Card title="Latest Sales"
                           className={'dashboard-card'}
                           headStyle={headStyle}
@@ -85,7 +85,7 @@ const Dashboard = () => {
                         <DashboardSales />
                     </Card>
                 </Col>
-                <Col span={6}>
+                <Col span={24} lg={{span: 6}}>
                     <Card title="Online Review"
                           headStyle={headStyle}
                           extra={<Avatar style={{'backgroundColor': Colors.green}} size={48} icon={<MoneyCollectOutlined />} />}
@@ -124,12 +124,12 @@ const Dashboard = () => {
                 </Col>
             </Row>
             <Row gutter={16}>
-                <Col span={8}>
+                <Col span={24} lg={{span: 8}} style={{'marginBottom': '30px'}}>
                     <Card className={'dashboard-card'} title={'Browsers'} headStyle={headStyle}>
                         <DashboardBrowsers />
                     </Card>
                 </Col>
-                <Col span={16}>
+                <Col span={24} lg={{span: 16}} style={{'marginBottom': '30px'}}>
                     <Card className={'dashboard-card'} title={'Users'} headStyle={headStyle}>
                         <DashboardTable pagination={false} />
                     </Card>

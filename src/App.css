@@ -1,0 +1,8 @@
+@media (min-width: 1025px) {
+    .global-layout {
+        margin-left: 200px;
+    }
+    .global-layout__inner {
+        padding: 64px 24px 24px 24px;
+    }
+}

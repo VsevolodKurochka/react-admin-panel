@@ -10,12 +10,14 @@ import {
 import { BrowserRouter as Router } from 'react-router-dom';
 import {createBrowserHistory} from 'history';
 import Dashboard from './pages/dashboard/Dashboard';
-import Home from './pages/home/Home';
 import Customers from './pages/customers/Customers';
 import Products from './pages/products/Products';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import Error404 from './pages/error404/Error404';
+import Account from './pages/account/Account';
+import Settings from './pages/settings/Settings';
+import './App.css';
 
 const history = createBrowserHistory();
 
@@ -24,9 +26,9 @@ function App() {
       <Router history={history}>
           <Layout style={{minHeight:"100vh"}}>
               <Header />
-              <Layout style={{ marginLeft: 200 }}>
+              <Layout className={'global-layout'}>
                   <Sidebar />
-                  <Layout style={{ padding: '64px 24px 24px 24px' }}>
+                  <Layout className={'global-layout__inner'}>
                       <Layout.Content
                           className="site-layout-background"
                           style={{
@@ -40,6 +42,8 @@ function App() {
                               <Route path="/login" component={Login} />
                               <Route path="/register" component={Register} />
                               <Route path="/404" component={Error404} />
+                              <Route path="/account" component={Account} />
+                              <Route path="/settings" component={Settings} />
                               <Route exact path="/" component={Dashboard} />
                               <Route path="*">
                                   <Redirect to={'/404'} />
