@@ -30,9 +30,8 @@ function App() {
                               minHeight: 280,
                           }}>
                           <Switch>
-                              <Route path="/dashboard" component={Dashboard} />
                               <Route path="/customers" component={Customers} />
-                              <Route exact path="/" component={Home} />
+                              <Route exact path="/" component={Dashboard} />
                               <Route path="*">
                                   <p>Not found</p>
                               </Route>

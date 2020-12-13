@@ -35,11 +35,8 @@ const Sidebar = () => {
                 selectedKeys={[location.pathname]}
                 style={{ height: '100%', borderRight: 0, paddingTop: '75px' }}
             >
-                <Menu.Item key="/" icon={<HomeOutlined />}>
-                    <Link to={'/'}>Home</Link>
-                </Menu.Item>
-                <Menu.Item key="/dashboard" icon={<DashboardOutlined />}>
-                    <Link to={'/dashboard'}>Dashboard</Link>
+                <Menu.Item key="/" icon={<DashboardOutlined />}>
+                    <Link to={'/'}>Dashboard</Link>
                 </Menu.Item>
                 <Menu.Item key="/customers" icon={<UsergroupDeleteOutlined />}><Link to={'/customers'}>Customers</Link></Menu.Item>
                 <Menu.Item key="/products" icon={<ShoppingCartOutlined />}>Products</Menu.Item>
