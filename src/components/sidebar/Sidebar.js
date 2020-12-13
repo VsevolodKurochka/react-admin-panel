@@ -43,8 +43,8 @@ const Sidebar = () => {
                 <Menu.Item key="/account" icon={<UserOutlined />}>Account</Menu.Item>
                 <Menu.Item key="/settings" icon={<SettingOutlined />}>Settings</Menu.Item>
                 <SubMenu key="sub1" icon={<KeyOutlined />} title="Authentication">
-                    <Menu.Item key="/login" icon={<LoginOutlined />}>Login</Menu.Item>
-                    <Menu.Item key="/register" icon={<UserAddOutlined />}>Register</Menu.Item>
+                    <Menu.Item key="/login" icon={<LoginOutlined />}><Link to={'/login'}>Login</Link></Menu.Item>
+                    <Menu.Item key="/register" icon={<UserAddOutlined />}><Link to={'/register'}>Register</Link></Menu.Item>
                 </SubMenu>
                 <Menu.Item key="/error" icon={<WarningOutlined />}>Error</Menu.Item>
             </Menu>
